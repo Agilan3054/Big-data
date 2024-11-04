@@ -1,0 +1,41 @@
+VPC AND EC2
+
+1. search bar vpc
+2. region Mumbai
+3. resources by region - click VPCS
+4. click existing vpc and delete.
+5. Left side, click you VPCs
+6. name tag: snuc-dc-vpc, IPv4 CIDR: 192.168.0.0/16, click create VPC.
+7. left side, click subnets
+8. click create subnet on top right, select vpc
+9. subet name: public-subnet, availability zone: Mumbai, IPv4 subnet CIDR: 192.168.0.0/24, click create subnet.
+10. left side, click internet gatway, click create internet gateway.
+11. name tage: snuc-dc-igw, click create igw.
+12.go to igw from left refresh, select snuc-dc-igw, click actions, and choose attach to VPC.
+13. select vpc and attach to igw
+14. left la go to route tables, refresh and click the route table id link.
+15. select routes and click edit routes from right
+16. click add route and select 0.0.0.0/0, right la choose internet gateway, and select created igw. and click save changes.
+17. left la click elastic IPs
+18. top right click allocate elastic IP address 
+19. create two and name one as web server and other as web client.
+20. search bar EC2 in new tab
+21. left side click instances
+22. launch instances
+23. number of instances: 2, name: VMs, down select ubuntu
+24. scroll down, key pair login, select procced without a key pair. click launch instance.
+25. go to ECs, centre la click instances running
+26. name one as web server, another as web client
+27. left la click Elastic IPs
+28. click web server IPv4 id, and click allocate elastic ip
+29. choose instance select web server instance and click associate. similarly do for web client.
+30. left la click instance, select the web server instance and click connect in the top right. scroll down and click connect, new tab will open.
+31. type ping 8.8.8.8 and check
+32. put sudo apt update, sudo apt install apache2, service apache2 status, 
+33. repeat all these for web client, till update
+34. instead of apache2, put sudo apt install links.
+35. come to EC2 instace page, click the webserver ipv4 link, scroll down select security, click link under security groups.
+36. Down inbound rule la, click edit inbound rules
+37. click add rule, select HTTP, right la anywhere ipv4, click save rules.
+38. go to webserver oda command prompt, copy the publicIPS: from bottom left.
+39. Now go to web client's prompt and put links http://"publicIPS" and enter.

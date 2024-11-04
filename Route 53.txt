@@ -1,0 +1,13 @@
+Route 53
+
+1. search la select route 53
+2. left la click dashboard, center under dns management click create hosted zone.
+3. domain name: 21011101011.ngaws.xyz, click create hosted zone.
+4. login in to godaddy.com, username: aws-ng, passwd: Welcome1!
+5. now under route53, under hostedzone, created domain, under records, in the value/route traffic to column, copy the website(eg: ns-131.awsdns-16.com)
+6. go to "https://dcc.godaddy.com/control/portfolio/ngaws.xyz/settings"
+select dns, and click add new record.
+7. type ns, name: 21011101011, value: "eg: ns-131.awsdns-16.com", click save.
+8. now again in route 53, hosted zone, click create record
+9. name: www, value: ip address of web server(Search la ec2, left la instnaces, select web server, keela details, copy ip address), create record.
+10. go to terminal of web client, put links www.21011101011.ngaws.xyz, and nslookup www.21011101011.ngaws.xyz.
