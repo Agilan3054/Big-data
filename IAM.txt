@@ -1,0 +1,5 @@
+IAM
+
+1. Search IAM
+2. left la click users, click create user.
+3. name: Alice, select provide aws management console, select I want to create IAM user, click next, again next. click create user.
