@@ -1,0 +1,19 @@
+Spark installation
+
+sudo apt update
+sudo apt upgrade -y
+python3 --version
+sudo dpkg --configure -a
+sudo apt install python3 -y
+sudo apt install default-jdk -y
+java -version
+readlink -f /usr/bin/java | sed "s:/bin/java::"
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+nano ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+source ~/.bashrc
+sudo apt install python3-pip -y
+pip3 install pyspark
+pyspark
+spark.range(5).show()
+exit()
